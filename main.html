@@ -19,7 +19,7 @@
       button {
         text-align: center;
         display: block;
-        background-color: #00bfff;
+        background-color: #ff00b7;
         color: rgb(0, 0, 0);
         padding: 10% 10% 10% 10%;
         text-decoration: none;
@@ -38,6 +38,8 @@
       function checkIfCorrect1() {
         if (correct === 1) {
           score = score + 1;
+        } else {
+          score = score - 1;
         }
         passToHTML();
         document.getElementById("score").innerHTML = "Score: " + score;
@@ -45,6 +47,8 @@
       function checkIfCorrect2() {
         if (correct === 2) {
           score = score + 1;
+        } else {
+          score = score - 1;
         }
         passToHTML();
         document.getElementById("score").innerHTML = "Score: " + score;
@@ -52,6 +56,8 @@
       function checkIfCorrect3() {
         if (correct === 3) {
           score = score + 1;
+        } else {
+          score = score - 1;
         }
         passToHTML(); // haha
         document.getElementById("score").innerHTML = "Score: " + score;
@@ -59,6 +65,8 @@
       function checkIfCorrect4() {
         if (correct === 4) {
           score = score + 1;
+        } else {
+          score = score - 1;
         }
         passToHTML();
         document.getElementById("score").innerHTML = "Score: " + score;
