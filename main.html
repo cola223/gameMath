@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1 + 2</title>
+    <style>
+      h1 {
+        font-size: 100px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 60px;
+      }
+      #priklad {
+        font-size: 50px;
+      }
+      button {
+        text-align: center;
+        display: block;
+        background-color: #00bfff;
+        color: rgb(0, 0, 0);
+        padding: 10% 10% 10% 10%;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 50px;
+      }
+    </style>
+
+    <script>
+      var correct;
+      var score = 0; //score of how many points in a row the player has answered correctly
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      window.addEventListener("load", passToHTML);
+      function checkIfCorrect1() {
+        if (correct === 1) {
+          score = score + 1;
+        }
+        passToHTML();
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
+      function checkIfCorrect2() {
+        if (correct === 2) {
+          score = score + 1;
+        }
+        passToHTML();
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
+      function checkIfCorrect3() {
+        if (correct === 3) {
+          score = score + 1;
+        }
+        passToHTML(); // haha
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
+      function checkIfCorrect4() {
+        if (correct === 4) {
+          score = score + 1;
+        }
+        passToHTML();
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
+      function passToHTML() {
+        var button = getRndInteger(1, 4);
+        var first = getRndInteger(0, 100);
+        var second = getRndInteger(0, 100);
+        var solution = first + second;
+        document.getElementById("priklad").innerHTML = first + " + " + second;
+        if (button === 1) {
+          document.getElementById("choice1").innerHTML = first + second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 1;
+        }
+        if (button === 2) {
+          document.getElementById("choice2").innerHTML = first + second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 2;
+        }
+        if (button === 3) {
+          document.getElementById("choice3").innerHTML = first + second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 3;
+        }
+        if (button === 4) {
+          document.getElementById("choice4").innerHTML = first + second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          correct = 4;
+        }
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
+
+      setInterval(timer(), 1000);
+      var time = 60;
+      function timer() {
+        if (time != 0) {
+          var time = -1;
+        }
+        document.getElementById("score").innerHTML = time;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Math Game</h1>
+    <h2 id="score"></h2>
+    <p id="time"></p>
+    <div id="question">
+      <p id="priklad"></p>
+    </div>
+    <button id="choice1" onclick="checkIfCorrect1()"></button>
+    <button id="choice2" onclick="checkIfCorrect2()"></button>
+    <button id="choice3" onclick="checkIfCorrect3()"></button>
+    <button id="choice4" onclick="checkIfCorrect4()"></button>
+  </body>
+</html>
