@@ -75,31 +75,142 @@
         var button = getRndInteger(1, 4);
         var first = getRndInteger(0, 100);
         var second = getRndInteger(0, 100);
+        var operation = getRndInteger(0, 4);
         var solution = first + second;
-        document.getElementById("priklad").innerHTML = first + " + " + second;
-        if (button === 1) {
+
+        if ((operation = 1)) {
+          document.getElementById("priklad").innerHTML = first + " + " + second;
+        }
+        if ((operation = 2)) {
+          document.getElementById("priklad").innerHTML = first + " - " + second;
+        }
+        if ((operation = 3)) {
+          document.getElementById("priklad").innerHTML = first + " * " + second;
+        }
+        if ((operation = 4)) {
+          document.getElementById("priklad").innerHTML = first + " / " + second;
+        }
+
+        if (button === 1 && operation === 1) {
           document.getElementById("choice1").innerHTML = first + second;
           document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
           correct = 1;
         }
-        if (button === 2) {
+
+        if (button === 1 && operation === 2) {
+          document.getElementById("choice1").innerHTML = first - second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 1;
+        }
+
+        if (button === 1 && operation === 3) {
+          document.getElementById("choice1").innerHTML = first * second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 1;
+        }
+
+        if (button === 1 && operation === 4) {
+          document.getElementById("choice1").innerHTML = first / second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 1;
+        }
+
+        if (button === 2 && operation === 1) {
           document.getElementById("choice2").innerHTML = first + second;
           document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
           correct = 2;
         }
-        if (button === 3) {
+
+        if (button === 2 && operation === 2) {
+          document.getElementById("choice2").innerHTML = first - second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 2;
+        }
+
+        if (button === 2 && operation === 3) {
+          document.getElementById("choice2").innerHTML = first * second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 2;
+        }
+
+        if (button === 2 && operation === 4) {
+          document.getElementById("choice2").innerHTML = first / second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 2;
+        }
+
+        if (button === 3 && operation === 1) {
           document.getElementById("choice3").innerHTML = first + second;
           document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
           correct = 3;
         }
-        if (button === 4) {
+
+        if (button === 3 && operation === 2) {
+          document.getElementById("choice3").innerHTML = first - second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 3;
+        }
+        if (button === 3 && operation === 3) {
+          document.getElementById("choice3").innerHTML = first * second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 3;
+        }
+        if (button === 3 && operation === 4) {
+          document.getElementById("choice3").innerHTML = first / second;
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice4").innerHTML = getRndInteger(0, 100);
+          correct = 3;
+        }
+
+        if (button === 4 && operation === 1) {
           document.getElementById("choice4").innerHTML = first + second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          correct = 4;
+        }
+
+        if (button === 4 && operation === 2) {
+          document.getElementById("choice4").innerHTML = first - second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          correct = 4;
+        }
+
+        if (button === 4 && operation === 3) {
+          document.getElementById("choice4").innerHTML = first * second;
+          document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
+          document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
+          correct = 4;
+        }
+
+        if (button === 4 && operation === 4) {
+          document.getElementById("choice4").innerHTML = first / second;
           document.getElementById("choice2").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice3").innerHTML = getRndInteger(0, 100);
           document.getElementById("choice1").innerHTML = getRndInteger(0, 100);
